@@ -8,7 +8,6 @@ import 'package:news_app/serves/api_manager.dart';
 // development branch
 class HomeScreen extends StatefulWidget {
   HomeScreen({super.key});
-  static const String routeName = '/home';
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -19,11 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: Text(
-          'Home',
-          style: Theme.of(context).textTheme.titleMedium,
-        ),
+        title: Text('Home', style: Theme.of(context).textTheme.titleMedium),
         centerTitle: true,
       ),
       drawer: AppDrawer(),

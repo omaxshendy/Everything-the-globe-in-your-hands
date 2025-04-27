@@ -1,30 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/theme/theme.dart';
 
-class DarkTheme extends BaseTheme{
+class DarkTheme extends BaseTheme {
   @override
- 
-  Color get backgroundColor => const Color(0xff171717);
+  // TODO: implement colorscheme
+  ColorScheme get colorscheme => ColorScheme.fromSeed(
+      seedColor: Colors.blueGrey, brightness: Brightness.dark);
 
-  @override
- 
-  Color get primaryColor => const Color(0xffFFFFFF);
-  @override
-  
   ThemeData get themeData => ThemeData(
-    primaryColor: primaryColor,
-    scaffoldBackgroundColor: backgroundColor,
-    appBarTheme: AppBarTheme(
-      backgroundColor: backgroundColor,
-    ),
-    textTheme: TextTheme(
-      titleMedium: TextStyle(
-        fontSize: 20,
-        color: primaryColor,
-        fontWeight: FontWeight.bold,
+      primaryColor: colorscheme.primaryContainer,
+      scaffoldBackgroundColor: colorscheme.surface,
+      appBarTheme: AppBarTheme(
+        backgroundColor: colorscheme.secondaryContainer,
       ),
-      
-    )
-  );
-
+      textTheme: TextTheme(
+        titleMedium: TextStyle(
+          fontSize: 20,
+          color: colorscheme.tertiary,
+          fontWeight: FontWeight.bold,
+        ),
+      ));
 }
